@@ -6,11 +6,11 @@ let Food = require('../source/food');
 describe('Hero', function() {
   beforeEach(function() {
     chad = new Hero('Chad', 'Banana bread');
-    
+
     task1 = new Task('kill rat', 8, 8, 1000);
     task2 = new Task('bake banana bread', 6, 10, 0);
     task3 = new Task('complete codeclan', 10, 9, -4500);
-    
+
     food = new Food('Shortbread', 20);
     favouriteFood = new Food('Banana bread', 50);
   });
@@ -34,12 +34,12 @@ describe('Hero', function() {
   it('should have a list of tasks', function() {
     assert.deepStrictEqual(chad.tasks, []);
   });
-  
+
   it('should be able to accept tasks', function() {
       chad.acceptTask(task1);
       assert.deepStrictEqual(chad.tasks, [task1]);
   });
-  
+
   it('should be able to sort by parameter', function() {
       chad.acceptTask(task1);
       chad.acceptTask(task2);
@@ -51,7 +51,7 @@ describe('Hero', function() {
 
   it('should be able to check for completed tasks', function() {
       task1.completeTask();
-      task3.completeTask()
+      task3.completeTask();
       chad.acceptTask(task1);
       chad.acceptTask(task2);
       chad.acceptTask(task3);
