@@ -49,6 +49,16 @@ describe('Hero', function() {
       assert.deepStrictEqual(chad.sortTasks('reward'), [task1, task2, task3]);
   });
 
+  it('should be able to check for completed tasks', function() {
+      task1.completeTask();
+      task3.completeTask()
+      chad.acceptTask(task1);
+      chad.acceptTask(task2);
+      chad.acceptTask(task3);
+      assert.deepStrictEqual(chad.viewCompleted(), [task1, task3]);
+      assert.deepStrictEqual(chad.viewIncomplete(), [task2]);
+  });
+
   it('should be able to eat food', function() {
     chad.eat(food);
     assert.strictEqual(chad.health, 120);

@@ -20,6 +20,14 @@ Hero.prototype = {
     return _.sortBy(this.tasks, [parameter]).reverse();
   },
   
+  viewCompleted: function() {
+    return _.filter(this.tasks, ['isCompleted', true]);
+  },
+  
+  viewIncomplete: function() {
+    return _.filter(this.tasks, ['isCompleted', false]);
+  },
+  
   eat: function(food) {
     let healthEffect = food.value;
     if (food.name === this.favouriteFood) {
