@@ -58,4 +58,10 @@ describe('Hero', function() {
     chad.eat(favouriteFood);
     assert.strictEqual(chad.health, 175);
   });
+
+  it('should lose health if they eat poisonous food', function() {
+    food.poisonous = true;
+    chad.eat(food);
+    assert.strictEqual(chad.health, 80);
+  });
 });

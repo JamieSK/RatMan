@@ -21,8 +21,14 @@ Hero.prototype = {
   },
   
   eat: function(food) {
-    this.health +=
-      food.name === this.favouriteFood ? food.value * 1.5 : food.value;
+    let healthEffect = food.value;
+    if (food.name === this.favouriteFood) {
+      healthEffect *= 1.5;
+    }
+    if (food.poisonous) {
+      healthEffect = -healthEffect;
+    }
+    this.health += healthEffect;
   },
 };
 
