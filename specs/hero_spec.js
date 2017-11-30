@@ -14,6 +14,10 @@ describe('Hero', function() {
     assert.strictEqual(chad.health, 100);
   });
 
+  it('should have a favourite food', function() {
+    assert.strictEqual(chad.favouriteFood, 'Banana bread');
+  });
+
   it('should be able to talk', function() {
     assert.strictEqual(chad.talk(), 'I\'m Chad');
   });

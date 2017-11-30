@@ -1,5 +1,6 @@
-let Hero = function(name) {
+let Hero = function(name, favouriteFood) {
   this.name = name;
+  this.favouriteFood = favouriteFood;
   this.health = 100;
   this.tasks = [];
 };
