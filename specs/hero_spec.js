@@ -13,4 +13,8 @@ describe('Hero', function() {
   it('should have a health', function() {
     assert.strictEqual(chad.health, 100);
   });
+
+  it('should be able to talk', function() {
+    assert.strictEqual(chad.talk(), 'I\'m Chad');
+  });
 });
