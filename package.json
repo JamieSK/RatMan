@@ -1,0 +1,25 @@
+{
+  "name": "ratman",
+  "version": "0.0.1",
+  "description": "Heroes and Rats",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamieSK/RatMan.git"
+  },
+  "author": "Jamie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JamieSK/RatMan/issues"
+  },
+  "homepage": "https://github.com/JamieSK/RatMan#readme",
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
