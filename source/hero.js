@@ -9,6 +9,11 @@ Hero.prototype = {
   talk: function() {
     return 'I\'m ' + this.name;
   },
+
+  eat: function(food) {
+    this.health +=
+      food.name === this.favouriteFood ? food.value * 1.5 : food.value;
+  },
 };
 
 module.exports = Hero;
