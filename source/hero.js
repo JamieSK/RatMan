@@ -9,6 +9,10 @@ Hero.prototype = {
   talk: function() {
     return 'I\'m ' + this.name;
   },
+
+  eat: function(food) {
+    this.health += food.value;
+  },
 };
 
 module.exports = Hero;
