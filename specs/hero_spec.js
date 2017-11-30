@@ -17,4 +17,8 @@ describe('Hero', function() {
   it('should be able to talk', function() {
     assert.strictEqual(chad.talk(), 'I\'m Chad');
   });
+
+  it('should have a list of tasks', function() {
+    assert.deepStrictEqual(chad.tasks, []);
+  });
 });
