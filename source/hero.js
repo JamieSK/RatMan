@@ -11,12 +11,19 @@ Hero.prototype = {
   talk: function() {
     return 'I\'m ' + this.name;
   },
+
   acceptTask: function(task) {
-      this.tasks.push(task);
+    this.tasks.push(task);
   },
+  
   sortTasks: function(parameter) {
-      return _.sortBy(this.tasks, [parameter]).reverse();
-  }
+    return _.sortBy(this.tasks, [parameter]).reverse();
+  },
+  
+  eat: function(food) {
+    this.health +=
+      food.name === this.favouriteFood ? food.value * 1.5 : food.value;
+  },
 };
 
 
