@@ -1,3 +1,5 @@
+let _ = require('lodash');
+
 let Hero = function(name, favouriteFood) {
   this.name = name;
   this.favouriteFood = favouriteFood;
@@ -11,6 +13,9 @@ Hero.prototype = {
   },
   acceptTask: function(task) {
       this.tasks.push(task);
+  },
+  sortTasks: function(parameter) {
+      return _.sortBy(this.tasks, [parameter]).reverse();
   }
 };
 
