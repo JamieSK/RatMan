@@ -11,18 +11,33 @@ Hero.prototype = {
   talk: function() {
     return 'I\'m ' + this.name;
   },
+
   acceptTask: function(task) {
-      this.tasks.push(task);
+    this.tasks.push(task);
   },
+  
   sortTasks: function(parameter) {
-      return _.sortBy(this.tasks, [parameter]).reverse();
+    return _.sortBy(this.tasks, [parameter]).reverse();
   },
+  
   viewCompleted: function() {
-      return _.filter(this.tasks, ['isCompleted', true]);
+    return _.filter(this.tasks, ['isCompleted', true]);
   },
+  
   viewIncomplete: function() {
-      return _.filter(this.tasks, ['isCompleted', false]);
-  }
+    return _.filter(this.tasks, ['isCompleted', false]);
+  },
+  
+  eat: function(food) {
+    let healthEffect = food.value;
+    if (food.name === this.favouriteFood) {
+      healthEffect *= 1.5;
+    }
+    if (food.poisonous) {
+      healthEffect = -healthEffect;
+    }
+    this.health += healthEffect;
+  },
 };
 
 
