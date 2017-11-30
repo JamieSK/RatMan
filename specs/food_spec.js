@@ -9,4 +9,8 @@ describe('Food', function() {
   it('should have a name', function() {
     assert.strictEqual(food.name, 'Banana bread');
   });
+
+  it('should have a replenishment value', function() {
+    assert.strictEqual(food.value, 9999);
+  });
 });
