@@ -11,7 +11,8 @@ Hero.prototype = {
   },
 
   eat: function(food) {
-    this.health += food.value;
+    this.health +=
+      food.name === this.favouriteFood ? food.value * 1.5 : food.value;
   },
 };
 
